@@ -12,8 +12,17 @@ class Person:
     def __str__(self):
         return "아이디:{0} 이름:{1} ".format(self.id, self.name)
 
+    #object 클래스의 __eq__ 재정의
+    def __eq__(self, id) :
+        if self.id == id :
+            return True
+        else :
+            return False
+
 #Person의 Sub Class 
 class Student(Person) :
+    staticVariable = 0  #클래스변수 : 객체생성하지 않고 클래스이름으로 참조
+
     def __init__(self, id, name, major):
         super().__init__(id, name)    #Super class의 생성자 호출
         self.major = major
@@ -26,7 +35,8 @@ class Student(Person) :
     # __str__재정의 : Override
     def __str__(self):
         return super().__str__()+" 전공:{0} ".format(self.major)
-
+    
+ 
 class Teacher(Person) :
     def __init__(self, id, name, subject) :
         super().__init__(id, name)
@@ -62,11 +72,13 @@ student2 = Student("CMSA07","박기윤","정보통신")
 teacher = Teacher("T001","박지수","함수형프로그래밍")
 employee = Employee("E001","심아윤","연구소")
 
-#__eq__ 재정의하기 전 객체의 주소값 비교
+
+#__eq__ 재정의하기 전 객체의 주소값 비교 :  student != student2
+#__eq__ 재정의한 후 (id값 비교) : student == student2
 if student == student2 :
-    print("student == students")
+    print("student == student2")
 else :
-    print("student != students")
+    print("student != student2")
 
 # print("isinstance student Student : " , isinstance(student, Student))
 # print("isinstance student Teacher : " , isinstance(student, Teacher))
@@ -88,6 +100,9 @@ employee.info()
 # print(student)
 # print(teacher)
 # print(employee)
+
+# student == student2 출력되도록 __eq__ Override해보기
+# 다형성과 Override 정리하기
 
 
 
