@@ -1,7 +1,9 @@
 #import test_module as test #ModuleNotFoundError
 # import test_package.test_module as test
 # import test_package.test_module2 as test2
-from test_package import *
+#from test_package import *
+from test_package import test_module
+from test_package import test_module2
 
 radius = test_module.number_input()
 print(test_module.get_circumferecne(radius))
