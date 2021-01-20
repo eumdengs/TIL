@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>bookmark</title>
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <section id="container">
+      <header id="header">
+        <div class="icon">
+          <img src="src/bookmark.png" alt="북마크아이콘" />
+        </div>
+        <div class="">bookmark</div>
+      </header>
+
+      <nav id="nav">
+        <div><a href="index.html">home</a></div>
+        <div class="active"><a href="create.html">create</a></div>
+      </nav>
+
+      <div id="create-container">
+        <form action="">
+          <div class="site boxes">
+            <label for="site">사이트명: </label>
+            <input type="text" id="site" />
+          </div>
+          <div class="url boxes">
+            <label for="url">url: </label>
+            <input type="text" id="url" />
+          </div>
+
+          <input type="submit" value="create!" />
+        </form>
+      </div>
+    </section>
+  </body>
+</html>

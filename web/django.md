@@ -104,3 +104,9 @@ Django 한그릇 뚝딱 마스터 해보기
    
 
 4. my_to_do_app의 urls.py
+
+
+
+
+
+[예제로 배우는 파이썬 프로그래밍 - Static 파일 (pythonstudy.xyz)](http://pythonstudy.xyz/python/article/314-Static-파일)
