@@ -6,6 +6,14 @@
 
 ### 구현화면
 
+**랜딩 페이지**
+
+
+
+
+
+
+
 **북마크구현_장고**
 
 ![bookmark_django](images/bookmark_django.gif)
@@ -197,4 +205,85 @@ app/static/child.css
 ### 아나콘다 가상환경설정
 
 
+
+### 장고 순서
+
+```python
+python manage.py runserver
+1. urls.py
+2. views.py
+3. template
+4. models.py
+```
+
+python 실행
+
+```python
+pip3 install django
+
+#landingpage 라는 프로젝트 생성
+django admin startproject landingpage
+#
+python manage.py migrate
+#makemigrations <app-name> -> 마이그레이션 파일 생성, 코드 생성
+#migrate <app-name> -> 마이그레이션 적용
+python manage.py startapp main
+#메인앱을 생성
+```
+
+settings.py
+
+```python
+ALLOWED_HOSTS = ['*']
+#'*'로 변경
+
+#static폴더를 형성하여 front-end 파일이동
+STATIC_URL = '/static/'
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static')
+)
+```
+
+**models.py**
+
+```python
+from django.db import models
+
+# Create your models here.
+class Post(models.Model):
+title = models.CharField(max_length=50)
+contetents = models.TextField()
+img = models.ImageField()
+dataCreat = models.DateTimeField()
+category = models. TextField()
+```
+
+admin.py
+
+```python
+from django.contrib import admin
+from .models import Post
+# Register your models here.
+
+admin.site.register(Post)
+```
+
+이후 terminal에서
+
+```python
+#Pillow 설치후
+python manage.py makemigrations
+python manage.py migrate
+python manage.py createsuperuser
+python manage.py runserver
+#admin으로 접속이 가능하다
+```
+
+
+
+
+
+### 부트스트랩
+
+startbootstrap.com에서 활용
 
