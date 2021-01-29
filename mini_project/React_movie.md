@@ -25,3 +25,22 @@ npx설치
 ```jsx
 npm install npx -g
 ```
+
+npx를 이용하여 리액트 앱을 생성해준다
+
+그리고 VSCode에서 실행
+
+```
+npx create-react-app movie_app
+```
+
+```
+npm start
+```
+
+GitHub연동
+
+
+
+
+
