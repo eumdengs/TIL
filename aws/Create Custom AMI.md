@@ -34,7 +34,7 @@ AMI에서 인스턴스 시작한 이후에 인스턴스를 연결할 수 있고,
 
 
 
-AMI 수명 주기를 요약하여 설명  =>![image-20210215091546377](C:\Users\eumde\AppData\Roaming\Typora\typora-user-images\image-20210215091546377.png)
+AMI 수명 주기를 요약하여 설명  =>![1](images/1.PNG)
 
 
 
@@ -70,5 +70,6 @@ AMI에서 *인스턴스*를 바로 시작하실 수 있는데, 이 인스턴스�
 
 ●또한 커스텀 AMI를 사용하여 시작 템플릿을 만들고 Auto Scaling 그룹에 추가해두면 스케일아웃 이벤트 발생시 동일한 환경의 인스턴스가 추가되고 사용자들에게 일관성 있는 서비스를 제공할 수 있게 된다.
 
-![image-20210215091624325](C:\Users\eumde\AppData\Roaming\Typora\typora-user-images\image-20210215091624325.png)
 
+
+![2](images/2.PNG)

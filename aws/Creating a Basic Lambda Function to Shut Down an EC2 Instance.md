@@ -1,3 +1,7 @@
+---
+typora-copy-images-to: images
+---
+
 ## Creating a Basic Lambda Function to Shut Down an EC2 Instance(team2)
 
 
@@ -14,19 +18,19 @@ Select the running instance.
 
 Copy its instance ID in the *Description* section, and paste it into a text file. We'll need it later in the lab.
 
-![1.instance](E:\eumdengs\Velog\images\1.instance.PNG)
+![1.instance](images/1.instance-1613546511234.PNG)
 
 
 
 Navigate to *Lambda*.
 
-![2.navigate_lamda](E:\eumdengs\Velog\images\2.navigate_lamda.PNG)
+![2.navigate_lamda](images/2.navigate_lamda-1613546517277.PNG)
 
 Click **Create function**.
 
 
 
-![3.function_created](E:\eumdengs\Velog\images\3.function_created.PNG)
+![3.function_created](images/3.function_created-1613546521389.PNG)
 
 
 
@@ -39,7 +43,7 @@ Make sure the Author from scratch(처음부터 작성) option at the top is sele
 
 Expand **Choose or create an execution role**.
 
-![3.function_created2](E:\eumdengs\Velog\images\3.function_created2.PNG)
+![3.function_created2](images/3.function_created2-1613546527189.PNG)
 
 
 
@@ -49,19 +53,19 @@ Click the **IAM console** link to create a custom role. A new tab will open.
 
 
 
-![4.IAM](E:\eumdengs\Velog\images\4.IAM.PNG)
 
 
+![4.IAM](images/4.IAM-1613546531359.PNG)
 
 Click the **IAM console** link to create **a custom role**. A new tab will open.
 
-![5.make_role](E:\eumdengs\Velog\images\5.make_role.PNG)
 
 
+![5.make_role](images/5.make_role-1613546536522.PNG)
 
 Select **AWS service**, and then select **Lambda**.
 
-![5.make_role2](E:\eumdengs\Velog\images\5.make_role2.PNG)
+![5.make_role2](images/5.make_role2-1613546540660.PNG)
 
 
 
@@ -69,7 +73,7 @@ Click **Next: Permissions**.
 
 Click **Create policy**.
 
-![5.make_role3](E:\eumdengs\Velog\images\5.make_role3.PNG)
+![5.make_role3](images/5.make_role3-1613546544700.PNG)
 
 
 
@@ -103,7 +107,7 @@ Click **Review policy**.
 
 Give it a *Name* and *Description* of "EC2shutdown".
 
-![5.make_role5](E:\eumdengs\Velog\images\5.make_role5.PNG)
+![5.make_role5](images/5.make_role5-1613546559629.PNG)
 
 
 
@@ -117,9 +121,9 @@ Head back to the IAM Management Console browser tab (the *Create role* page).
 
 In the *Attach permissions policies* section, in the *Filter policies* box, search for for the newly created **EC2shutdown** role. (You may need to click the refresh icon so it finds it.)
 
-![6.check](E:\eumdengs\Velog\images\6.check.PNG)
 
 
+![6.check](images/6.check-1613546564284.PNG)
 
 
 
@@ -133,7 +137,7 @@ On the tags page, set the following values:
 
   
 
-![7.태그](E:\eumdengs\Velog\images\7.태그.PNG)
+![7.태그](images/7.%ED%83%9C%EA%B7%B8-1613546574625.PNG)
 
 
 
@@ -143,9 +147,9 @@ On the review page, give it a *Role name* of "EC2shutdownrole".
 
 Click **Create role**.
 
-![7.태그2](E:\eumdengs\Velog\images\7.태그2.PNG)
+![7.태그2](images/7.%ED%83%9C%EA%B7%B82-1613546579064.PNG)
 
-![7.태그3](E:\eumdengs\Velog\images\7.태그3.PNG)
+![7.태그3](images/7.%ED%83%9C%EA%B7%B83-1613546582545.PNG)
 
 
 
@@ -157,7 +161,7 @@ Hit refresh next to the *Existing role* dropdown, and then click to select **EC2
 
 Click **Create function**.
 
-![8.backtolamda](E:\eumdengs\Velog\images\8.backtolamda.PNG)
+![8.backtolamda](images/8.backtolamda-1613546587524.PNG)
 
 
 
@@ -169,19 +173,19 @@ Click **Create function**.
 
 On the *EC2shutdown* page, click **Test**.
 
-![9.test_btn](E:\eumdengs\Velog\images\9.test_btn.PNG)
+![9.test_btn](images/9.test_btn-1613546592842.PNG)
 
 
 
 In the *Configure test event* dialog, give it an *Event name* of "EC2shutdown".
 
-![9.test_btn2](E:\eumdengs\Velog\images\9.test_btn2.PNG)
 
 
+![9.test_btn2](images/9.test_btn2-1613546597253.PNG)
 
 Click **Create**. We should receive verification that the test was successful.
 
-![9.test_btn3](E:\eumdengs\Velog\images\9.test_btn3.PNG)
+![9.test_btn3](images/9.test_btn3-1613546602303.PNG)
 
 Back on the *EC2shutdown* page, scroll down to the *Function code* section, and delete the existing code.
 
@@ -205,11 +209,11 @@ Replace the instance ID currently in the `instances` line with the EC2 instance 
 
 Click **Deploy**.
 
-![10.function](E:\eumdengs\Velog\images\10.function.PNG)
+![10.function](images/10.function-1613546606494.PNG)
 
 In a new browser tab, navigate to **EC2** > **Instances** > **Running instances**. Our instance should still be running.
 
-![11.running_instance](E:\eumdengs\Velog\images\11.running_instance.PNG)
+![11.running_instance](images/11.running_instance-1613546610629.PNG)
 
 
 
@@ -221,7 +225,7 @@ Back in the EC2 instances page, we should see our instance has stopped running.
 
 
 
-![12.end](E:\eumdengs\Velog\images\12.end.PNG)
+![12.end](images/12.end-1613546615442.PNG)
 
 
 
@@ -229,4 +233,4 @@ Back in the EC2 instances page, we should see our instance has stopped running.
 
 
 
-![13.stop_instance](E:\eumdengs\Velog\images\13.stop_instance.PNG)
+![13.stop_instance](images/13.stop_instance-1613546619236.PNG)

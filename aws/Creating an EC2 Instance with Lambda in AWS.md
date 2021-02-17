@@ -2,7 +2,7 @@
 
 
 
-![000](E:\eumdengs\Velog\images\Creating an EC2 Instance with Lambda in AWS\000.PNG)
+![000](images/000-1613546630244.PNG)
 
 
 
@@ -14,21 +14,21 @@ Navigate to EC2.
 
 In the navigation pane, under **NETWORK & SECURITY**, choose **Key Pairs**.
 
-![1.choose_keypair](E:\eumdengs\Velog\images\Creating an EC2 Instance with Lambda in AWS\1.choose_keypair.PNG)
+![1.choose_keypair](images/1.choose_keypair.PNG)
 
 
 
 Choose **Create Key Pair**.
 
-![2.create_keypair](E:\eumdengs\Velog\images\Creating an EC2 Instance with Lambda in AWS\2.create_keypair.PNG)
 
 
+![2.create_keypair](images/2.create_keypair.PNG)
 
 
 
 Enter a name for the new key pair (e.g., "LambdaEC2keypair") in the **Key pair name** field of the **Create Key Pair** dialog box, and then choose **Create**.
 
-![2.create_keypair2](E:\eumdengs\Velog\images\Creating an EC2 Instance with Lambda in AWS\2.create_keypair2.PNG)
+![2.create_keypair2](images/2.create_keypair2-1613546653069.PNG)
 
 
 
@@ -44,13 +44,13 @@ Save the private key file in a safe place.
 
 Navigate to Lambda.
 
-![2.navigate_lamda](E:\eumdengs\Velog\images\Creating a Basic Lambda Function to Shut Down an EC2 Instance\2.navigate_lamda.PNG)
 
 
+![2.navigate_lamda](images/2.navigate_lamda-1613546661806.PNG)
 
 Click **Create a function**.
 
-![3.function_created](E:\eumdengs\Velog\images\Creating a Basic Lambda Function to Shut Down an EC2 Instance\3.function_created.PNG)
+![3.function_created2](images/3.function_created2-1613546697093.PNG)
 
 
 
@@ -64,7 +64,7 @@ Expand *Choose or create an execution role*.
 
 Set *Execution role* to **Create a new role with basic Lambda permissions**.
 
-![3.lamda_created](E:\eumdengs\Velog\images\Creating an EC2 Instance with Lambda in AWS\3.lamda_created.PNG)
+![3.lamda_created](images/3.lamda_created-1613546702767.PNG)
 
 CreateEC2-role-bv773fbr
 
@@ -74,13 +74,13 @@ Copy the execution role name that appears (it will be something like *CreateEC2-
 
 Click **Create function**.
 
-![3.lamda_created2](E:\eumdengs\Velog\images\Creating an EC2 Instance with Lambda in AWS\3.lamda_created2.PNG)
+![3.lamda_created2](images/3.lamda_created2.PNG)
 
 
 
 In a new browser tab, navigate to IAM.
 
-![4.IAM](E:\eumdengs\Velog\images\Creating a Basic Lambda Function to Shut Down an EC2 Instance\4.IAM.PNG)
+![4.IAM](images/4.IAM-1613546714177.PNG)
 
 
 
@@ -88,7 +88,7 @@ Click **Roles** in the left-hand menu.
 
 In the search box, type in the name of the role we just created.
 
-![4.find_my_role](E:\eumdengs\Velog\images\Creating an EC2 Instance with Lambda in AWS\4.find_my_role.PNG)
+![4.find_my_role](images/4.find_my_role.PNG)
 
 
 
@@ -96,19 +96,19 @@ Select the role.
 
 Click the policy that's currently attached to the role.
 
-![5.attach_policy](E:\eumdengs\Velog\images\Creating an EC2 Instance with Lambda in AWS\5.attach_policy.PNG)
+![5.attach_policy](images/5.attach_policy.PNG)
 
 
 
 Click **{} JSON**.
 
-![5.attach_policy2](E:\eumdengs\Velog\images\Creating an EC2 Instance with Lambda in AWS\5.attach_policy2.PNG)
 
 
+![5.attach_policy2](images/5.attach_policy2.PNG)
 
 Click **Edit policy** > **JSON**.
 
-![5.attach_policy3](E:\eumdengs\Velog\images\Creating an EC2 Instance with Lambda in AWS\5.attach_policy3.PNG)
+![5.attach_policy3](images/5.attach_policy3.PNG)
 
 
 
@@ -137,17 +137,15 @@ Paste in the follwing policy:
 }
 ```
 
-![5.attach_policy4](E:\eumdengs\Velog\images\Creating an EC2 Instance with Lambda in AWS\5.attach_policy4.PNG)
+![5.attach_policy4](images/5.attach_policy4.PNG)
 
 Click **Review policy** and then **Save changes**.
 
 
 
-![5.attach_policy5_review](E:\eumdengs\Velog\images\Creating an EC2 Instance with Lambda in AWS\5.attach_policy5_review.PNG)
+![5.attach_policy5_review](images/5.attach_policy5_review.PNG)
 
-
-
-![5.attach_policy5_review2](E:\eumdengs\Velog\images\Creating an EC2 Instance with Lambda in AWS\5.attach_policy5_review2.PNG)
+![5.attach_policy5_review2](images/5.attach_policy5_review2.PNG)
 
 
 
@@ -191,7 +189,7 @@ Click **Save**.
 
 
 
-![6.source](E:\eumdengs\Velog\images\Creating an EC2 Instance with Lambda in AWS\6.source.PNG)
+![6.source](images/6.source.PNG)
 
 
 
@@ -201,7 +199,7 @@ Click **Save**.
 
 Scroll down to the **Environment variables** section.
 
-![7.environment](E:\eumdengs\Velog\images\Creating an EC2 Instance with Lambda in AWS\7.environment.PNG)
+![7.environment](images/7.environment.PNG)
 
 
 
@@ -236,9 +234,9 @@ Set the following environment variables:
   - *Key*: **KEY_NAME**
   - *Value*: The name of the EC2 key pair you created earlier.
 
-![9-2](E:\eumdengs\Velog\images\Creating an EC2 Instance with Lambda in AWS\9-2.PNG)
 
 
+![9-2](images/9-2.PNG)
 
 - ```
   SUBNET_ID
@@ -247,21 +245,21 @@ Set the following environment variables:
   - *Key*: **SUBNET_ID**
   - *Value*: Navigate to **VPC** > **Subnets**, and copy and paste the ID of one of the public subnets in your VPC.
 
-![9-3](E:\eumdengs\Velog\images\Creating an EC2 Instance with Lambda in AWS\9-3.PNG)
 
 
+![9-3](images/9-3.PNG)
 
 Save the Lambda function.
 
 
 
-![7.environment2](E:\eumdengs\Velog\images\Creating an EC2 Instance with Lambda in AWS\7.environment2.PNG)
+![7.environment2](images/7.environment2.PNG)
 
-![9-4](E:\eumdengs\Velog\images\Creating an EC2 Instance with Lambda in AWS\9-4.PNG)
-
-![9-5](E:\eumdengs\Velog\images\Creating an EC2 Instance with Lambda in AWS\9-5.PNG)
+![9-4](images/9-4.PNG)
 
 
+
+![9-5](images/9-5.PNG)
 
 ### Test Lambda Function
 
@@ -273,17 +271,17 @@ Give it any name you like.
 
 Click **Create**.
 
-![8.test1](E:\eumdengs\Velog\images\Creating an EC2 Instance with Lambda in AWS\8.test1.PNG)
+![8.test1](images/8.test1.PNG)
 
-![8.test2](E:\eumdengs\Velog\images\Creating an EC2 Instance with Lambda in AWS\8.test2.PNG)
+![8.test2](images/8.test2.PNG)
 
 
 
 Click **Test**.
 
-![8.test3](E:\eumdengs\Velog\images\Creating an EC2 Instance with Lambda in AWS\8.test3.PNG)
 
 
+![8.test3](images/8.test3.PNG)
 
 Navigate to **EC2** > **Instances**, and observe that an EC2 instance is initializing.
 
