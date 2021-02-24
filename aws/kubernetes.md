@@ -96,3 +96,12 @@ mkdir -p $HOME/bin && cp ./kubectl $HOME/bin/kubectl && export PATH=$PATH:$HOME/
 ```
 
 -> 어디서나 실행가능하게 만들어준다
+
+
+
+
+
+
+
+
+
